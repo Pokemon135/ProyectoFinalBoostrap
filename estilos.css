@@ -1,10 +1,121 @@
+p{
+    text-align: justify;
+    font-family: 'Hind', sans-serif;
+}
+
+a{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+img{
+    text-align: center;
+}
+
 h1 {
+    text-align: center;
     font-family: 'Itim', cursive;
 }
 
 h2 {
+    text-align: center;
     font-family: 'Mukta', sans-serif;
 }
+
 body {
-    background-color: brown;
+    background-color: rgb(83, 179, 104);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.barra{
+    background-color: cyan;
+}
+
+.barra ul {
+    list-style: none;
+}
+
+.barra ul li {
+    display: inline-block;
+}
+
+.barra ul li a{
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 20px;
+}
+
+.barra ul li a:hover{
+    background-color: orangered;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.contenedor > div{
+    background-color: darkgoldenrod;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contenedor .header{
+    background-color: blue;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.contenedor .contenido{
+    grid-column: span 2;
+    background-color: orange;
+}
+
+.contenedor .sidebar{
+    background-color:gold;
+    grid-row: span 2;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2{
+    background-color: green;
+    color: yellow;
+}
+
+.contenedor .footer{
+    text-align: center;
+    grid-column: span 3;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: rgb(70, 160, 160);
+    }
+
+    .contenedor .contenido{
+        grid-column: 1/-1;
+    }
+
+    .contenedor .sidebar{
+        grid-column: 1/-1;
+    }
+
+    .contenedor .widget-1{
+        grid-column: span 2;
+    }
 }
